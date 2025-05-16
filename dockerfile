@@ -7,7 +7,6 @@ ADD https://www.tooplate.com/download/2137_barista_cafe/2137_barista_cafe.zip /v
 WORKDIR /var/www/html/
 RUN unzip 2137_barista_cafe.zip
 RUN cp -rvf 2137_barista_cafe/* .
-RUN rm -rf 2137_barista_cafe0 2137_barista_cafe.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-EXPOSE 80 443
+EXPOSE 80
 
