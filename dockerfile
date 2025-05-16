@@ -19,7 +19,7 @@ RUN unzip photogenic.zip && \
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
 <<<<<<< HEAD
-EXPOSE 80 443 
+EXPOSE 80  
 
 =======
 EXPOSE 80
