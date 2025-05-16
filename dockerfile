@@ -1,5 +1,5 @@
 vi Dockerfile
-FROM centos:7
+FROM centos:8
 MAINTAINER aravindh.sekarit@gmail.com
 RUN yum install -y httpd \
  zip\
