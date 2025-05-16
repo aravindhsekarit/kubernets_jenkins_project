@@ -18,5 +18,9 @@ RUN unzip photogenic.zip && \
 # Start Apache in foreground
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
-EXPOSE 80 443
+<<<<<<< HEAD
+EXPOSE 80 
 
+=======
+EXPOSE 80
+>>>>>>> 108c68232341b4b81c47fdaffeb0480c52c59013
