@@ -1,27 +1,14 @@
+vi Dockerfile
 FROM centos:7
-
 MAINTAINER aravindh.sekarit@gmail.com
-
-# Install required packages
-RUN yum install -y httpd zip unzip && \
-    yum clean all
-
-# Download and unzip the website template
+RUN yum install -y httpd \
+ zip\
+ unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
-
-WORKDIR /var/www/html
-
-RUN unzip photogenic.zip && \
-    cp -rvf photogenic/* . && \
-    rm -rf photogenic photogenic.zip
-
-# Start Apache in foreground
+WORKDIR /var/www/html/
+RUN unzip photogenic.zip
+RUN cp -rvf photogenic/* .
+RUN rm -rf photogenic photogenic.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-
-<<<<<<< HEAD
-EXPOSE 80  
-
-
-=======
 EXPOSE 80
->>>>>>> 108c68232341b4b81c47fdaffeb0480c52c59013
+
